@@ -1,0 +1,8 @@
+.vagrant
+/main/data
+*.ipr
+*.iml
+*.iws
+.idea
+*.box
+/main/dse
