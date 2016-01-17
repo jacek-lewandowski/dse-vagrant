@@ -19,6 +19,7 @@ This may take a while, but it is performed only once. It will create virtual mac
 At this point the setup, which you need to only once, is completed.
 
 To run DSE:
+
 1. Build your DSE locally with `./gradlew clean jar`
 2. Run the machine: `cd main/vagrant` then `vagrant up <machine>`
 3. Login to the machine: `cd main/vagrant` then `vagrant ssh <machine>`
