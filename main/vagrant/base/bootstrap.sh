@@ -16,7 +16,11 @@ apt-get -y -q upgrade
 apt-get -y -q install software-properties-common htop
 apt-get -y -q install mc
 
-addIfMissing /etc/bash.bashrc 'locale-gen UTF-8'
+locale-gen UTF-8 en_US en_US.UTF-8
+dpkg-reconfigure locales
+
+addIfMissing /etc/bash.bashrc 'export LC_CTYPE=en_US.UTF-8'
+addIfMissing /etc/bash.bashrc 'export LC_ALL=en_US.UTF-8'
 
 add-apt-repository -y ppa:webupd8team/java
 apt-get -y -q update
@@ -36,3 +40,4 @@ apt-get clean
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
 cat /dev/null > ~/.bash_history && history -c && exit
+
